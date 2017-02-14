@@ -1,5 +1,48 @@
-<h3> Hot Reads! </h3>
+<div style="display: table;
+  margin-right: auto;
+  margin-left: auto;">
 
-<% @counts.each do |url, count| %>
-  <p> <%= url %> : <%= count %> </p>
-<% end %>
+<h1> Welcome to Hot Reads </h1>
+<p> Top 10 Most-Read URLs Within the Last 24 Hours </p>
+
+<table>
+  <thead>
+    <tr>
+      <td>URL</td>
+      <td>Read Count</td>
+    </tr>
+  </thead>
+  <tbody>
+  <% @counts.each do |url, count| %>
+    <tr>
+      <td> <%= url %> </td>
+      <td> <%= count %> </td>
+    </tr>
+  <% end %>
+</tbody>
+</table>
+
+</div>
+
+<style>
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+
+}
+
+table, th, td {
+    border: 1px solid black;
+}
+
+thead {
+  text-align: center;
+  font-size: 30px;
+}
+
+tbody {
+  text-align: center;
+}
+
+</style>
